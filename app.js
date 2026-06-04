@@ -105,6 +105,9 @@ function escapeHTML(str) {
 }
 
 // ── Event listeners ─────────────────────────────────────────────
+// <!-- Tefo Komane: Adding event listener for the Priority dropdown -->
+const prioritySelect = document.querySelector('#priority-select');
+
 document.querySelector('#add-btn').addEventListener('click', () => {
   const input = document.querySelector('#task-input');
   addTask(input.value);

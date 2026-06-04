@@ -17,7 +17,13 @@ function saveTasks() {
 function addTask(text) {
   const trimmed = text.trim();
   if (!trimmed) return;
-  tasks.push({ id: Date.now(), text: trimmed, completed: false });
+  tasks.push({ 
+    id: Date.now(), 
+    text: trimmed,
+    // <!-- Tefo Komane: Saving the selected priority value when adding a new task -->
+    priority: prioritySelect.value,
+    completed: false 
+  });
   saveTasks();
   render();
 }

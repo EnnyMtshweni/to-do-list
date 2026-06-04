@@ -84,14 +84,15 @@ function render() {
     const li = document.createElement('li');
     li.className = 'task-item' + (task.completed ? ' completed' : '');
     li.dataset.id = task.id;
-
+//<!-- Tefo Komane: modified the task-text - Displaying the priority badge next to the task text -->
     li.innerHTML = `
       <button class="check-btn" aria-label="mark complete">
         <svg viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg">
           <polyline points="1.5,6 4.5,9.5 10.5,2.5" stroke="#000" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
-      <span class="task-text">${escapeHTML(task.text)}</span>
+      
+      <span class="task-text">${escapeHTML(task.text)} <span class="priority-badge">[${task.priority}]</span></span>
       <button class="delete-btn" aria-label="delete task">✕</button>
     `;
 

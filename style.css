@@ -286,3 +286,27 @@ h1 span {
 }
 
 #clear-completed:hover { color: var(--danger); }
+
+<!-- Tefo Komane: Styles for the Priority dropdown and badge -->
+#priority-select {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+  background-color: white;
+}
+
+#priority-select:hover {
+  border-color: #999;
+}
+
+.priority-badge {
+  font-weight: bold;
+  margin-left: 8px;
+  font-size: 12px;
+}
+
+.priority-badge {
+  color: #666;
+}
